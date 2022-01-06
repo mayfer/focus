@@ -591,12 +591,12 @@ Hangs up the telephone and says, "Oh, it does tire a person's arm so!"`,
             let r = Math.min(window.innerHeight, window.innerWidth) / 3;
             let rad = 2*Math.PI*(i/texts.length);
             return html`
-                <div style="position: absolute; top: ${parseInt(centerY + r*Math.sin(rad))}px; left: ${centerX + parseInt(r*Math.cos(rad))}px; width: 300px; transform: translateX(-50%); text-align: center;">
+                <div style="position: absolute; top: ${parseInt(centerY + r*Math.sin(rad))}px; left: ${centerX + parseInt(r*Math.cos(rad))}px; width: 300px; transform: translate(-50%, -50%); text-align: center;">
                     <${App} text=${text} />
                 </div>
             `;
         })}
-        <div style="position: absolute; top: ${centerY}px; left: ${centerX}px; transform: translateX(-50%); font-size: 40px; opacity: 0.2">
+        <div style="position: absolute; top: ${centerY}px; left: ${centerX}px; transform: translate(-50%, -50%); font-size: 40px; opacity: 0.2">
             focus
         </div>
     `, document.body);
